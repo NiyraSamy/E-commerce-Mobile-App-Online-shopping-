@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="image_btn"> Image Button </string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="category_array">
+        <item> Shirts </item>
+        <item> Jackets </item>
+        <item> Pants </item>
+        <item> Blouses </item>
+    </string-array>
+
+    <string name="group1">Shop</string>
+    <string-array name="group1">
+        <item>Shirts</item>
+        <item>Jackets</item>
+        <item>Pants</item>
+        <item>Blouses</item>
+    </string-array>
+
+    <string name="title_activity_location">Map</string>
+    <string name="title_activity_location_activity">Map</string>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup_activity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/sign_guid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+    <EditText
+        android:id="@+id/username_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/sign_guid"
+        android:layout_margin="20dp"
+        android:hint="Username"
+        android:textSize="18sp"/>
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/username_e"
+        android:layout_margin="20dp"
+        android:hint="E-mail"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/password_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit"
+        android:layout_margin="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/birth_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/password_e"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="BirthDate"
+        android:layout_margin="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/day_edit"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/day_edit"
+        android:layout_width="270dp"
+        android:layout_height="44dp"
+        android:layout_margin="20dp"
+        android:hint="DD / MM / YYYY"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/birth_txt"
+        app:layout_constraintTop_toBottomOf="@+id/password_e" />
+    <EditText
+        android:id="@+id/job_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/day_edit"
+        android:layout_margin="20dp"
+        android:hint="Jop title"
+        android:textSize="18sp"/>
+    <TextView
+        android:id="@+id/gender_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/job_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Gender"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="10dp"/>
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/job_edit"
+        app:layout_constraintStart_toEndOf="@+id/gender_txt"
+        app:layout_constraintBaseline_toBaselineOf="@+id/gender_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp"
+        android:entries="@array/gender_array"/>
+
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:text="Sign Up"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/gender_txt"
+        android:layout_margin="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

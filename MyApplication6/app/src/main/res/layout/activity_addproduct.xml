@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Addproduct_Activity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/g1"
+        app:layout_constraintWidth_percent="0.4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/download"/>
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Product Name"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/product_image" />
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Product Price"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    <EditText
+        android:id="@+id/product_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Product Quantity"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/product_price" />
+    <TextView
+        android:id="@+id/category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Category"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="10dp"/>
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/category_array"
+        app:layout_constraintTop_toBottomOf="@+id/product_quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/category_title"
+        app:layout_constraintBaseline_toBaselineOf="@+id/category_title"
+        android:padding="10dp" />
+    <TextView
+        android:id="@+id/qr_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/category_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Product QR"
+        android:layout_margin="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="10dp"/>
+    <EditText
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/category_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="140dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:id="@+id/qr_edittext"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_qr_image"
+        app:layout_constraintTop_toBottomOf="@+id/category_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_qr"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="310dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/Add_Product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        android:text="Add Product"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/qr_title"
+        android:layout_margin="40dp"/>
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Add_Product"
+        android:text="Show"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:padding="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
